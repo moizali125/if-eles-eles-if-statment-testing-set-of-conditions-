@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IF…ELSE & ELSE IF STATEMENT ; TESTING SET OF CONDITIONS</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="blue"></div>
+    <div class="heading">
+      <div class="space"></div>
+      <div class="head">
+        <h1>IF…ELSE & ELSE IF STATEMENT ; TESTING SET OF CONDITIONS</h1>
+      </div>
+      <div class="space"></div>
+    </div>
+    <div class="blue-buttom">
+      <div class="para">
+        Assinment # 12-13 <br />
+        JAVASCRIPT
+      </div>
+    </div>
+    <div class="chap">
+      <h1><br />C h a p t e r s</h1>
+      <br />
+    </div>
+
+    <div class="moiz">
+      <h1>if...else and else if statements</h1>
+      <p class="ali">
+        The if statements you've coded so far have been all-or-nothing. If the
+        condition tested <br />
+        true, something happened. If the condition tested false, nothing
+        happened. <br />
+        <br />
+        1 var x = prompt("Where does the Pope live?"); <br />
+        2 if (x === "Vatican") { <br />
+        3 alert("Correct!"); <br />
+        4 } <br />
+        <br />
+        Quite often, you want something to happen either way. For example:
+        <br />
+        <br />
+        1 var x = prompt("Where does the Pope live?"); <br />
+        2 if (x === "Vatican") { <br />
+        3 alert("Correct!"); <br />
+        4 } <br />
+        5 if (x !== "Vatican") { <br />
+        6 alert("Wrong answer"); <br />
+        7 } <br />
+        <br />
+        In this example, we have two if statements, one testing for "Vatican,"
+        and another testing <br />
+        for not-"Vatican". So all cases are covered, with one alert or another
+        displaying, depending on <br />
+        what the user has entered. <br />
+        The code works, but it's more verbose than necessary. The following code
+        is more <br />
+        concise and, as a bonus, more readable. <br />
+        <br />
+        1 if (x === "Vatican") { <br />
+        2 alert("Correct!"); <br />
+        3 } <br />
+        4 else { <br />
+        5 alert("Wrong answer"); <br />
+        6 } <br />
+        <br />
+        In the style convention I follow, the else part has exactly the same
+        formatting as the if part. <br />
+        As in the if part, any number of statements can execute within the else
+        part. <br />
+        <br />
+        1 var correctAnswer = "Vatican"; <br />
+        2 if (x === correctAnswer) { <br />
+        3 alert("Correct!"); <br />
+        4 } <br />
+        5 else { <br />
+        6 score--; <br />
+        7 userIQ = "problematic"; <br />
+        8 alert("Incorrect"); <br />
+        9 } <br />
+        <br />
+        else if is used if all tests above have failed and you want to test
+        another condition. <br />
+        <br />
+        1 var correctAnswer = "Vatican"; <br />
+        2 if (x === correctAnswer) { <br />
+        3 alert("Correct!"); <br />
+        4 } <br />
+        5 else if (x === "Rome") { <br />
+        6 alert("Incorrect but close"); <br />
+        7 } <br />
+        8 else { <br />
+        9 alert("Incorrect"); <br />
+        10 } <br />
+        <br />
+        In a series of if tests, JavaScript stops testing whenever a condition
+        tests true. <br />
+      </p>
+    </div>
+    <div class="moiz">
+      <h1>Testing sets of conditions</h1>
+      <p class="ali">
+        Using the if statement, you've learned to test for a condition. If the
+        condition is met, one or <br />
+        more statements execute. But suppose not one but two conditions have to
+        be met in order for a <br />
+        test to succeed. <br />
+        For example, if a guy weighs more than 300 pounds, he's just a great big
+        guy. But if he <br />
+        weighs more than 300 pounds and runs 40 yards in under 6 seconds? You're
+        going to invite <br />
+        him to try out for the NLF as a lineman. You can test for a combination
+        of conditions in <br />
+        JavaScript by using... <br />
+        && <br />
+        Here's the code. <br />
+        <br />
+        1 if (weight > 300 && time < 6) { <br />
+        2 alert("Come to our tryout!"); <br />
+        3 } <br />
+        4 else { <br />
+        5 alert("Come to our cookout!"); <br />
+        6 } <br />
+        <br />
+        You can chain any number of conditions together. <br />
+        <br />
+        1 if (weight > 300 && time < 6 && age > 17 && gender === "male") {
+        <br />
+        2 alert("Come to our tryout!"); <br />
+        3 } <br />
+        4 else { <br />
+        5 alert("Come to our cookout!"); <br />
+        6 } <br />
+        <br />
+        You can also test for any of a set of conditions. This is the operator.
+        <br />
+        || <br />
+        Here's an example. <br />
+        <br />
+        1 if (SAT > avg || GPA > 2.5 || sport === "football") { <br />
+        2 alert("Welcome to Bubba State!"); <br />
+        3 } <br />
+        4 else { <br />
+        5 alert("Have you looked into appliance repair?"); <br />
+        6 } <br />
+        <br />
+        If in line 1 any or all of the conditions are true, the first alert
+        displays. If none of them are <br />
+        true (line 4), the second alert displays. <br />
+        You can combine any number of and and or conditions. When you do, you
+        create <br />
+        ambiguities. Take this line... <br />
+        <br />
+        if (age > 65 || age < 21 && res === "U.S.") { <br />
+        <br />
+        This can be read in either of two ways. <br />
+        The first way it can be read: If the person is over 65 or under 21 and,
+        in addition to either <br />
+        of these conditions, is also a resident of the U.S. Under this
+        interpretation, both columns <br />
+        need to be true in the following table to qualify as a pass. <br />
+        The second way it can be read: If the person is over 65 and living
+        anywhere or is under <br />
+        <br />
+        21 and a resident of the U.S. Under this interpretation, if either
+        column in the following <br />
+        table is true, it's a pass. <br />
+        It's the same problem you face when you combine mathematical
+        expressions. And you <br />
+        solve it the same way: with parentheses. <br />
+        In the following code, if the subject is over 65 and a U.S. resident,
+        it's a pass. Or, if the <br />
+        subject is under 21 and a U.S. resident, it's a pass. <br />
+        <br />
+        if ((age > 65 || age < 21) && res === "U.S.") { <br />
+        <br />
+        In the following code, if the subject is over 65 and living anywhere,
+        it's a pass. Or, if the <br />
+        subject is under 21 and living in the U.S., it's a pass. <br />
+        <br />
+        if (age > 65 || (age < 21 && res === "U.S.")) { <br />
+      </p>
+    </div>
+    <div class="moiz">
+      <h1>Assignment</h1>
+      <p class="ali">
+        <object
+          data="./chapters12-13-1.pdf"
+          type="application/pdf"
+          width="100%"
+          height="500px"
+        >
+          <p>
+            Unable to display PDF file.
+            <a href="./chapters12-13-1.pdf">Download</a>
+            instead.
+          </p>
+        </object>
+      </p>
+    </div>
+    <div class="chap">
+      <h1><br />Perform The Assignment</h1>
+      <br />
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
