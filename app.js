@@ -34,6 +34,7 @@ function displayLarger() {
     // Check if the two integers are equal
     if (num1 === num2) {
         alert("The two integers are equal.");
+    } else {
         // Determine the larger integer
         var larger = (num1 > num2) ? num1 : num2;
         alert("The larger integer is: " + larger);
